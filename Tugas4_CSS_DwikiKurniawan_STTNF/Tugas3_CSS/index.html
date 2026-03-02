@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3 - Frame dengan CSS</title>
+    <style type="text/css">
+        /* Internal StyleSheet - Tugas 3 */
+        
+        /* Selector Tag - Universal */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #667eea;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 0.9em;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0;
+            font-weight: bold;
+            border-right: 1px solid #555;
+        }
+
+        nav a:hover {
+            background-color: #667eea;
+        }
+
+        nav a:last-child {
+            border-right: none;
+        }
+
+        .content-wrapper {
+            display: flex;
+            min-height: 60vh;
+        }
+
+        aside {
+            width: 20%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+            overflow-y: auto;
+        }
+
+        main {
+            width: 60%;
+            background-color: white;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .sidebar-right {
+            width: 20%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.05);
+            overflow-y: auto;
+        }
+
+        aside h2, .sidebar-right h2 {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+        }
+
+        legend {
+            color: #667eea;
+            font-weight: bold;
+            padding: 0 5px;
+        }
+
+        aside ul, .sidebar-right ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        aside li, .sidebar-right li {
+            margin-bottom: 8px;
+            padding: 8px;
+            background-color: white;
+            border-left: 3px solid #667eea;
+            border-radius: 3px;
+        }
+
+        aside a, .sidebar-right a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        aside a:hover, .sidebar-right a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        main h1, main h2 {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        main ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        main li {
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            border-left: 3px solid #667eea;
+            border-radius: 3px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gallery-item {
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+        }
+
+        .gallery-item h3 {
+            color: #667eea;
+            font-size: 0.95em;
+            margin: 10px 0 5px 0;
+        }
+
+        .gallery-item p {
+            color: #666;
+            font-size: 0.85em;
+            margin: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 0.9em;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        /* Selector Class */
+        .marquee {
+            background-color: #667eea;
+            color: white;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #667eea;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            aside, main, .sidebar-right {
+                width: 100%;
+                box-shadow: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            nav a {
+                display: block;
+                border-right: none;
+                border-bottom: 1px solid #555;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.4em;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tugas 3 - Frame</h1>
+        <p>Studying Form and Frame</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#study">Study</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
+
+    <div class="content-wrapper">
+        <!-- Left Sidebar -->
+        <aside>
+            <h2>Sosial Media Teman</h2>
+
+            <fieldset>
+                <legend>Instagram</legend>
+                <ul>
+                    <li><a href="https://instagram.com/ainunnisa.wn06" target="_blank">nun05</a></li>
+                    <li><a href="https://instagram.com/tayo.rhdn" target="_blank">Rahardian Prasetyo</a></li>
+                    <li><a href="https://instagram.com/syahrularc2_" target="_blank">syahrul</a></li>
+                    <li><a href="https://instagram.com/mhmmddhaffa" target="_blank">D</a></li>
+                    <li><a href="https://instagram.com/rizqi_23m" target="_blank">Rizqi Fadilah</a></li>
+                </ul>
+            </fieldset>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <div id="home">
+                <h1>DWIKI KURNIAWAN</h1>
+                <p style="text-align: center;"><b>Kampus:</b> STT Terpadu Nurul Fikri</p>
+                <img class="profile-img" src="https://dwikiport.vercel.app/images/Photo.jpeg" alt="Foto Profil">
+
+                <h2>Biodata Lengkap</h2>
+                <ul>
+                    <li><b>Tempat, Tanggal Lahir:</b> Jakarta, 13 Agustus 2004</li>
+                    <li><b>Jenis Kelamin:</b> Laki-laki</li>
+                    <li><b>No. HP:</b> <u>08811310300</u></li>
+                    <li><b>Alamat:</b> Jalan Blok Sawo VII</li>
+                    <li><b>Email:</b> <i>dwikikurniawanreal@gmail.com</i></li>
+                </ul>
+            </div>
+
+            <div id="study">
+                <h2>Riwayat Pendidikan</h2>
+                <ol>
+                    <li><b>SD:</b> SDN 1 Gandul</li>
+                    <li><b>SMP:</b> SMPIP As-Sa'adatain</li>
+                    <li><b>SMA:</b> MAN 11 Jakarta</li>
+                    <li><b>Kuliah:</b> STT Terpadu Nurul Fikri</li>
+                </ol>
+            </div>
+
+            <div id="gallery">
+                <h2>Gallery Multimedia</h2>
+                <div class="marquee">
+                    Koleksi Gambar dan Kegiatan Mahasiswa | Dokumentasi Workshop dan Seminar | Portfolio Karya Terbaik
+                </div>
+
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://dwikiport.vercel.app/images/project-1.png" alt="Website PKTJ">
+                        <h3>Website PKTJ</h3>
+                        <p>Website Perhitungan Lalu Lintas</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="https://dwikiport.vercel.app/images/project-2.png" alt="UI/UX PKTJ">
+                        <h3>UI/UX PKTJ</h3>
+                        <p>JavaScript Intermediate</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="https://dwikiport.vercel.app/images/project-3.png" alt="UI Poin Siswa">
+                        <h3>UI Poin Siswa</h3>
+                        <p>UI/UX Design</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="https://dwikiport.vercel.app/images/project-4.png" alt="(PETEMKAT) Mobile">
+                        <h3>(PETEMKAT) Mobile</h3>
+                        <p>UI/UX Design</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="https://dwikiport.vercel.app/images/project-5.png" alt="Health App">
+                        <h3>Health App (SoulEase)</h3>
+                        <p>UI/UX Design</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="https://dwikiport.vercel.app/images/project-6.png" alt="Quiz App">
+                        <h3>Quiz/Reminder App</h3>
+                        <p>UI/UX Design</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <div class="sidebar-right">
+            <h2>Materi Pembelajaran</h2>
+
+            <fieldset>
+                <legend>Frontend Development</legend>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com" target="_blank">W3Schools Online</a></li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Backend Development</legend>
+                <ul>
+                    <li><a href="https://nodejs.org/docs" target="_blank">Node.js Documentation</a></li>
+                    <li><a href="https://docs.python.org" target="_blank">Python Official Docs</a></li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Database & Tools</legend>
+                <ul>
+                    <li><a href="https://www.postgresql.org/docs" target="_blank">PostgreSQL Docs</a></li>
+                    <li><a href="https://www.mongodb.com/docs" target="_blank">MongoDB Documentation</a></li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Framework & Library</legend>
+                <ul>
+                    <li><a href="https://react.dev" target="_blank">React Official Site</a></li>
+                    <li><a href="https://expressjs.com" target="_blank">Express.js Guide</a></li>
+                </ul>
+            </fieldset>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Tentang Pembuat Halaman</h3>
+        <p>Halaman ini dibuat oleh <b>Dwiki Kurniawan</b></p>
+        <p>Mahasiswa STT Terpadu Nurul Fikri (SIB)<br>Program Studi: Teknik Informatika</p>
+        <p><b>Kegiatan: FullStack Web Developer</b></p>
+        <p>
+            <a href="mailto:dwikikurniawanreal@gmail.com">Email: dwikikurniawanreal@gmail.com</a><br>
+            <a href="https://instagram.com/dwikidharmawan" target="_blank">Instagram: @dwikidharmawan</a><br>
+            <a href="https://github.com/dwikikurniawanedu" target="_blank">GitHub: dwikikurniawanedu</a>
+        </p>
+        <p>&copy; 2026 SIB - All Rights Reserved</p>
+    </footer>
+</body>
+</html>

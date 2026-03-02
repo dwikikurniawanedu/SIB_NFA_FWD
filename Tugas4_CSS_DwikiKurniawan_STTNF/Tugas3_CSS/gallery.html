@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style type="text/css">
+        body {
+            padding: 20px;
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #333;
+        }
+
+        h1 {
+            color: #667eea;
+            text-align: center;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .marquee {
+            background-color: #667eea;
+            color: white;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            flex: 0 1 calc(33.33% - 10px);
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .gallery-item h3 {
+            color: #667eea;
+            font-size: 0.95em;
+            margin: 10px 0 5px 0;
+        }
+
+        .gallery-item p {
+            color: #666;
+            font-size: 0.85em;
+            margin: 0;
+            padding: 0 5px 10px 5px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex: 0 1 calc(50% - 7.5px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex: 0 1 100%;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Gallery Multimedia</h1>
+
+    <div class="marquee">
+        Koleksi Gambar dan Kegiatan Mahasiswa | Dokumentasi Workshop dan Seminar | Portfolio Karya Terbaik
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://dwikiport.vercel.app/images/project-1.png" alt="Website PKTJ">
+            <h3>Website PKTJ</h3>
+            <p>Website Perhitungan Lalu Lintas</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://dwikiport.vercel.app/images/project-2.png" alt="UI/UX PKTJ">
+            <h3>UI/UX PKTJ</h3>
+            <p>JavaScript Intermediate</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://dwikiport.vercel.app/images/project-3.png" alt="UI Poin Siswa">
+            <h3>UI Poin Siswa</h3>
+            <p>UI/UX Design</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://dwikiport.vercel.app/images/project-4.png" alt="(PETEMKAT) Mobile">
+            <h3>(PETEMKAT) Mobile</h3>
+            <p>UI/UX Design</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://dwikiport.vercel.app/images/project-5.png" alt="Health App">
+            <h3>Health App (SoulEase)</h3>
+            <p>UI/UX Design</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://dwikiport.vercel.app/images/project-6.png" alt="Quiz App">
+            <h3>Quiz/Reminder App</h3>
+            <p>UI/UX Design</p>
+        </div>
+    </div>
+</body>
+</html>

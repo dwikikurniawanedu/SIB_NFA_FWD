@@ -4,18 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Right Sidebar</title>
-    <style>
-        body { background-color: #f0f0f0; padding: 10px; }
-        h2 { text-align: center; color: #333; }
-        h3 { margin-top: 0; color: #333; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin-bottom: 5px; }
-        a { text-decoration: none; color: #667eea; }
+    <style type="text/css">
+        body {
+            background-color: #f0f0f0;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: white;
+        }
+
+        legend {
+            color: #667eea;
+            font-weight: bold;
+            padding: 0 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            padding: 6px;
+            background-color: #f9f9f9;
+            border-left: 3px solid #667eea;
+            border-radius: 3px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <h2>Materi Pembelajaran</h2>
-    
+
     <fieldset>
         <legend>Frontend Development</legend>
         <ul>
@@ -23,7 +70,7 @@
             <li><a href="https://www.w3schools.com" target="_blank">W3Schools Online</a></li>
         </ul>
     </fieldset>
-    
+
     <fieldset>
         <legend>Backend Development</legend>
         <ul>
@@ -31,7 +78,7 @@
             <li><a href="https://docs.python.org" target="_blank">Python Official Docs</a></li>
         </ul>
     </fieldset>
-    
+
     <fieldset>
         <legend>Database & Tools</legend>
         <ul>
@@ -39,7 +86,7 @@
             <li><a href="https://www.mongodb.com/docs" target="_blank">MongoDB Documentation</a></li>
         </ul>
     </fieldset>
-    
+
     <fieldset>
         <legend>Framework & Library</legend>
         <ul>
