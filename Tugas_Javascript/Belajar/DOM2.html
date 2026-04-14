@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./1.avif" id="gambar" alt="Gambar 1" width="200">
+
+    <button onclick="ubahGambar()">Ubah Gambar</button>
+
+    <script>
+        function ubahGambar() {
+            let img = document.getElementById("gambar");
+            if (img.getAttribute("src").includes("./1.avif")) {
+                img.setAttribute("src", "./2.jpg");
+                img.setAttribute("alt", "Gambar 2");
+            } else {
+                img.setAttribute("src", "./1.avif");
+                img.setAttribute("alt", "Gambar 1");
+            }
+        }
+    </script>
+</body>
+</html>
