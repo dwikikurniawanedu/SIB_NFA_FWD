@@ -7,7 +7,6 @@ let produkList = [
   { id: 5, nama: "Keyboard", harga: 300000 }
 ];
 
-// **Event Handler (contoh sederhana)**
 const eventHandler = {
   klikTampil: () => tampilkanProduk(),
 };
@@ -16,13 +15,11 @@ const eventHandler = {
 function tambahProduk(id, nama, harga) {
   const produkBaru = { id, nama, harga };
 
-  // spread: menambahkan tanpa merusak data lama
   produkList = [...produkList, produkBaru];
 
   console.log("Produk berhasil ditambahkan!");
 }
 
-// **Menghapus Produk (Rest Parameter + filter)**
 function hapusProduk(id) {
   // filter produk selain id yang dihapus
   produkList = produkList.filter(produk => produk.id !== id);
@@ -30,7 +27,6 @@ function hapusProduk(id) {
   console.log("Produk berhasil dihapus!");
 }
 
-// **Menampilkan Produk (Destructuring)**
 function tampilkanProduk() {
   console.log("=== Daftar Produk ===");
 
@@ -39,11 +35,6 @@ function tampilkanProduk() {
   });
 }
 
-// ===============================
-// **EVENT LISTENER (Simulasi DOM)**
-// ===============================
-
-// contoh jika di HTML ada button dengan id "btnTampil"
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("btnTampil");
 
@@ -52,17 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// ===============================
-// **TEST MANUAL (WAJIB ADA)**
-// ===============================
-
-// tampil awal
 tampilkanProduk();
 
-// tambah produk
 tambahProduk(6, "Headset", 400000);
 tampilkanProduk();
 
-// hapus produk
 hapusProduk(2);
 tampilkanProduk();
