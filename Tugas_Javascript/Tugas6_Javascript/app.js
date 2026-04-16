@@ -1,4 +1,3 @@
-// app.js
 import { index, store, store2 } from "./modules/controller.js";
 
 document.addEventListener("DOMContentLoaded", () => {

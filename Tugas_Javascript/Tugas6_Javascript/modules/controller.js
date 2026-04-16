@@ -1,4 +1,3 @@
-// modules/controller.js
 import users from "./data.js";
 
 // Tampilkan Data (pakai map)
