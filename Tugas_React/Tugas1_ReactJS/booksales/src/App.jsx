@@ -16,7 +16,7 @@ function App() {
             >
               {" "}
               <i
-                class="fa-solid fa-book fa-2xl"
+                className="fa-solid fa-book fa-2xl"
                 style={{ color: " rgb(116, 192, 252)" }}
               ></i>
               <span className="ms-2 fs-4 text-primary fw-bold">antarbook </span>
