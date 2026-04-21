@@ -1,0 +1,77 @@
+// books.js
+const books = [
+  {
+    id: 1,
+    title: "Atomic Habits",
+    author: "James Clear",
+    year: 2018,
+    description: "An easy & proven way to build good habits and break bad ones.",
+    image: "https://picsum.photos/200?1",
+  },
+  {
+    id: 2,
+    title: "Rich Dad Poor Dad",
+    author: "Robert Kiyosaki",
+    year: 1997,
+    description: "What the Rich Teach Their Kids About Money That the Poor and Middle Class Do Not!",
+    image: "https://picsum.photos/200?2",
+  },
+  {
+    id: 3,
+    title: "The Psychology of Money",
+    author: "Morgan Housel",
+    year: 2020,
+    description: "An entertaining and informative book on the psychology of money.",
+    image: "https://picsum.photos/200?3",
+  },
+  {
+    id: 4,
+    title: "Clean Code",
+    author: "Robert C. Martin",
+    year: 2008,
+    description: "A handbook of agile software craftsmanship.",
+    image: "https://picsum.photos/200?4",
+  },
+  {
+    id: 5,
+    title: "Deep Work",
+    author: "Cal Newport",
+    year: 2016,
+    description: "Rules for focused success in a distracted world.",
+    image: "https://picsum.photos/200?5",
+  },
+  {
+    id: 6,
+    title: "Think and Grow Rich",
+    author: "Napoleon Hill",
+    year: 1937,
+    description: "The classic book on personal development and wealth building.",
+    image: "https://picsum.photos/200?6",
+  },
+  {
+    id: 7,
+    title: "Start With Why",
+    author: "Simon Sinek",
+    year: 2009,
+    description: "Leadership lessons from the best motivational speaker of our time.",
+    image: "https://picsum.photos/200?7",
+  },
+  {
+    id: 8,
+    title: "Zero to One",
+    author: "Peter Thiel",
+    year: 2014,
+    description: "On the importance of creating something new and unique.",
+    image: "https://picsum.photos/200?8",
+  },
+  {
+    id: 9,
+    title: "The Lean Startup",
+    author: "Eric Ries",
+    year: 2011,
+    description: "How today's entrepreneurs use continuous innovation to create radically successful businesses.",
+    image: "https://picsum.photos/200?9",
+  },
+];
+
+export default books;
