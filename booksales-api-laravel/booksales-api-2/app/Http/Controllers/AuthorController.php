@@ -9,9 +9,8 @@ class AuthorController extends Controller
 {
     public function index()
     {
-        $author = new Author();
-        $authors = $author->getAuthors();
+        $authors = Author::all();
 
-        return view('authors', compact('authors'));
+        return view('authors', ['authors' => $authors]);
     }
 }

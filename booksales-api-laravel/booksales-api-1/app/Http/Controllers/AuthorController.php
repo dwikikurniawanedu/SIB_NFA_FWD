@@ -12,6 +12,6 @@ class AuthorController extends Controller
         $author = new Author();
         $authors = $author->getAuthors();
 
-        return view('authors', compact('authors'));
+        return view('authors', ['authors' => $authors]);
     }
 }

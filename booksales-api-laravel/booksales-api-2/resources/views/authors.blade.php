@@ -8,10 +8,9 @@
 <body>
     <h1>Hello, Authors!</h1>
 
-    @foreach ($authors as $item)
+    @foreach ($authors as $author)
         <ul>
-            <li>{{$item['id']}}</li>
-            <li>{{$item['name']}}</li>
+            <li>{{$author['name']}}</li>
         </ul>
     @endforeach
 </body>

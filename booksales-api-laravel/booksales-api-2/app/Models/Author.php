@@ -6,22 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
-    private $authors = [
-        [
-            'id' => 1,
-            'name' => 'J.K. Rowling',
-        ],
-        [
-            'id' => 2,
-            'name' => 'George R.R. Martin',
-        ],
-        [
-            'id' => 3,
-            'name' => 'J.R.R. Tolkien',
-        ]
-    ];
-
-    public function getAuthors() {
-        return $this->authors;
-    }
+    protected $table = 'authors';
 }
