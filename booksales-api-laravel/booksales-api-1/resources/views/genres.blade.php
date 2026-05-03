@@ -8,10 +8,10 @@
 <body>
     <h1>Hello, Genres!</h1>
 
-    @foreach ($genres as $item)
+    @foreach ($genres as $genre)
         <ul>
-            <li>{{$item['id']}}</li>
-            <li>{{$item['name']}}</li>
+            <li>{{$genre['id']}}</li>
+            <li>{{$genre['name']}}</li>
         </ul>
     @endforeach
 </body>
